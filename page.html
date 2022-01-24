@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello, Drea! ^_^</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <script language="javascript" type="text/javascript">            
+            // From w3 Schools
+            window.onload = function() {
+                raccoonFact()
+                startTime()
+            }
+
+            function raccoonFact(){
+                let facts = [
+                    'One hypothesis for the dark fur around a raccoon\'s eyes is that it may help reduce glare and enhance night vision.',
+                    'The number of rings on a raccoon\'s tail range from 5 to 8.',
+                    'Raccoons can live up to 20 years in captivity',
+                    'Raccoons were introduced into Germany, Russia, and Japan in the 20th century.',
+                    'The first urban sighting of a raccoon was in Cincinnati in the 1920\'s.',
+                    'Raccoons give birth to 4-5 kits in a litter.',
+                    'The scientific name for raccoons is <i>Procyon lotor</i>, which means “Before-dog washer”.',
+                    'Raccoons can run at speeds of up to 15 miles per hour.',
+                    '\'Raccoon\' is a Powahatan word meaning “animal that scratches with its hands”',
+                    'The raccoon is the largest member of the *Procyonidae* family.',
+                    'The American Whig Party used the a raccoon as their mascot in the 1830\'s.',
+                    'Raccoons can both sweat and pant to disperse of heat, whereas most mammals can only perform one.',
+                    'Studies on raccoons have shown that raccoons have a learning speed akin to apes.',
+                    'Raccoons were made into popular pets and imported to Japan after the success of the 1977 anime, Rascal the Raccoon.',
+                    'Sterling North’s <i>Rascal</i> is an an autobiographical book, documenting a year of his life in which he raised a raccoon named Rascal.',
+                    'A group of raccoons is called a \'Gaze\'.',
+                    'The Germanic word for raccoon is <i>Waschbär</i>, which translates to “The Washing Bear” due to the animal\'s habit of dousing food in water.',
+                    'French Naturalist Comte de Buffon believed raccoons doused their food in water due to an inability to produce saliva, we now know this to be false.',
+                    'Calivin Coolidge had a pet raccoon named Rebecca.',
+                    'The comic book character Rocket Raccoon was directly inspired by Paul McCartney’s faux-western song, Rocky Raccoon.',
+                    'Raccoons communicate with each other using over 200 different sounds and 12-15 different calls.',
+                    'Raccoons are capable of opening doors, jars, bottles and latches.',
+                    'As of 2020, there has only been one recorded human death from raccoon rabies in the United States.',
+                    'A raccoon can withstand a drop of 35 feet.',
+                    'On average, Adult raccoons weigh 15 to 40 pounds. However, there have been specimens from urban areas that weigh up to 60 pounds.',
+                    'Raccoons make several types of noises, including purrs, chittering sounds, and various growls, snarls, and snort.',
+                    'Raccoons can rotate their hind feet 180 degrees and descend trees headfirst.',
+                    'The famous Sioux leader Spotted Tail took his name from a raccoon skin hat with the tail attached he acquired from a fur trader.',
+                    'When fed cat food over a long period of time, raccoons can develop gout.',
+                    'Since 1987, the raccoon has been identified as the most important wild furbearer in North America in terms of revenue.',
+                    'The Dakota Sioux believe raccoons have natural spirit powers, as their masks resemble facial paintings used during rituals to connect to spirit beings.',
+                    'Entrances to raccoon dens are usually at least 4 inches high and 6 inches wide.',
+                    'The Spanish word for raccoons, <i>mapache</i> was borrowed from the Aztec Nahualti word *mapachitli*, meaning \'[the] one who takes everything in its hands\'.',
+                    'The famous Sioux leader Spotted Tail took his name afrom a raccoon skin hat he acquired from a fur trader.',
+                    'When fed cat food over a long period of time, raccoons can develop gout.',
+                    'The Dakota Sioux believe the raccoon has natural spirit powers, since its mask resembles the facial paintings (two-fingered swashes of black and white) used during rituals to connect to spirit beings.',
+                    'The percentage of urban raccoons sleeping in abandoned or occupied houses varies from 15-43%. With the lowest being Washginton DC, USA and the highest being Kassel, Germany.'
+                ];
+                document.getElementById('r1').innerHTML=facts[Math.floor(Math.random()*38)];
+                document.getElementById('r2').innerHTML=facts[Math.floor(Math.random()*38)];
+                document.getElementById('r3').innerHTML=facts[Math.floor(Math.random()*38)];
+            }
+
+            function startTime() {
+                console.log("fuk")
+                let date = new Date();
+                let h = date.getHours();
+                let m = date.getMinutes();
+                let s = date.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+                options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'}
+                document.getElementById("datetime").innerHTML = date.toLocaleDateString("en-US", options);                
+                setTimeout(startTime, 1000);
+            }
+            
+            function checkTime(i) {
+                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                return i;
+            }
+        </script>
+        <div class="centercontainer">
+        <h1>\(^_^)/<br>Welcome Back!</h1>
+        <div class='bookmarkscontainer'>
+            <ul>
+                <li>
+                    <a class="link" href="https://www.lofi.cafe/">Lofi Cafe</a>
+                </li>
+                <li>
+                    <a class="link" href="https://music.youtube.com/">YT Music</a>
+                </li>
+                <li>
+                    <a class="link" href="https://soundcloud.com/">Soundcloud</a>
+                </li>
+                <li>
+                    <a class="link" href="http://mikudb.moe/">MikuDB</a>
+                </li>
+                <li>
+                    <a class="link" href="https://downloads.khinsider.com/">VGMusic</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a class="link" href="https://www.inoreader.com/">Inoreader</a>
+                </li>
+                <li>
+                    <a class="link" href="https://www.tumblr.com/">Tumblr</a>
+                </li>
+                <li>
+                    <a class="link" href="https://github.com/">GitHub</a>
+                </li>
+                <li>
+                    <a class="link" href="https://mail.google.com/mail/u/0/">Gmail</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a class="link" href="https://netflix.com/">Netflix</a>
+                </li>
+                <li>
+                    <a class="link" href="https://www.youtube.com/">YouTube</a>
+                </li>
+                <li>
+                    <a class="link" href="https://www.twitch.tv/">Twitch</a>
+                </li>
+            </ul>
+            <ul>
+
+                <li>
+                    <a class="link" href="https://www.tinkercad.com/dashboard/">TinkerCAD</a>
+                </li>
+                <li>
+                    <a class="link" href="https://www.chase.com/">Chase</a>
+                </li>
+            </ul>
+        </div>
+        <div id="clock"></div>
+        <div class="tickershadow"></div>
+        <div class="tickerwrap">
+            <div class="ticker">
+                <div id="r1" class="racfact"></div>
+                <div id="r2" class="racfact"></div>
+                <div id="r3" class="racfact"></div>
+            </div>
+        </div>
+        <div id="datetime"></div>
+    </div>
+    <!-- <iframe src="https://duckduckgo.com/search.html?width=250&prefill=Search&focus=yes" style="overflow:hidden;margin:0;padding:0;width:308px;height:30px;" frameborder="0"></iframe>--> 
+    </body>
+</html>

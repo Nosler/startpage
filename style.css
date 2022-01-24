@@ -1,0 +1,195 @@
+#datetime {
+    text-align: right;
+    top: 2px;
+    right:5px;
+    position: absolute;
+}
+
+#clock {
+    top: 15px;
+    right:5px;
+    position: absolute;
+}
+
+.centercontainer {
+    width: 700px;
+    height: 500px;
+    margin: auto;
+    position:absolute;
+    left: calc(50vw - 350px);
+    top: calc(50vh - 250px);
+    background-color: black;
+    border-color: rgb(89, 0, 172);
+    border-style: solid;
+    border-width: 2px;
+}
+
+.bookmarkscontainer {
+    top: 215px;
+    width: auto;
+    margin-left:47px;
+    margin-right:30px;
+    position:relative;
+    display: inline-block;
+}
+
+.link {
+    text-align: left;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 16px;
+    color: cyan;
+}
+
+.tickershadow {
+    box-shadow: inset 5px 0px 5px  rgb(0, 0, 0), inset -5px 0px 5px  rgb(0, 0, 0);
+    z-index: 5;
+}
+
+.tickerwrap, .tickershadow {
+    width:675px;
+    height:20px;
+    bottom:0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position:absolute;
+    overflow:hidden;
+    box-sizing: content-box;
+}
+
+.tickerwrap .ticker {
+    white-space: nowrap;
+    display: inline-block;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: 60s;
+    animation-duration: 60s;
+}
+
+.racfact {
+    padding-left: 60px;
+    display:inline-block;
+}
+
+@-webkit-keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  @keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+
+body {
+    font-family:'pixeledeveylouv1medium';
+    font-size: 16px;
+    color: blueviolet;
+    background-image:url("bg.png");
+    background-repeat: repeat;
+}
+
+h1 {
+    font-family:'cursiveregular';
+    font-size: 48px;
+    top:40px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+ul {
+    width: 115px;
+    float: left;
+    padding-left:0px;
+    padding-right:0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    list-style-type: none;
+    line-height:180%;
+}
+
+li {
+    text-align: left;
+    height: 35px;
+    line-height: 16px;
+}
+
+@font-face {
+    font-family: 'alagardmedium';
+    src: url('fonts/alagard-webfont.woff2') format('woff2'),
+         url('fonts/alagard-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'astalemtimmedium';
+    src: url('fonts/astalemtim-webfont.woff2') format('woff2'),
+         url('fonts/astalemtim-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cursiveregular';
+    src: url('fonts/cursive-webfont.woff2') format('woff2'),
+         url('fonts/cursive-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dogica_pixelregular';
+    src: url('fonts/dogicapixel-webfont.woff2') format('woff2'),
+         url('fonts/dogicapixel-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'rainyheartsmedium';
+    src: url('fonts/rainyhearts-webfont.woff2') format('woff2'),
+         url('fonts/rainyhearts-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'talk-to-three-headed-monkeyRg';
+    src: url('fonts/talk-to-three-headed-monkey-webfont.woff2') format('woff2'),
+         url('fonts/talk-to-three-headed-monkey-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pixeledeveylouv1medium';
+    src: url('fonts/pixeledeveylouv1-webfont.woff2') format('woff2'),
+         url('fonts/pixeledeveylouv1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
