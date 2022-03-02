@@ -5,13 +5,13 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <script language="javascript" type="text/javascript">            
-            // From w3 Schools
+        <script language="javascript" type="text/javascript" src="links.js"></script>
+        <script language="javascript" type="text/javascript">
             window.onload = function() {
                 raccoonFact()
                 startTime()
+                addLinks()
             }
-
             function raccoonFact(){
                 let facts = [
                     'One hypothesis for the dark fur around a raccoon\'s eyes is that it may help reduce glare and enhance night vision.',
@@ -56,9 +56,7 @@
                 document.getElementById('r2').innerHTML=facts[Math.floor(Math.random()*38)];
                 document.getElementById('r3').innerHTML=facts[Math.floor(Math.random()*38)];
             }
-
             function startTime() {
-                console.log("fuk")
                 let date = new Date();
                 let h = date.getHours();
                 let m = date.getMinutes();
@@ -70,69 +68,44 @@
                 document.getElementById("datetime").innerHTML = date.toLocaleDateString("en-US", options);                
                 setTimeout(startTime, 1000);
             }
-            
             function checkTime(i) {
                 if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
                 return i;
             }
+            function createLink(link_data) {
+                let li = document.createElement("li");
+                let a = document.createElement("a");
+                a.href = link_data.url;
+                let link_text = document.createTextNode(link_data.title);
+                a.appendChild(link_text)
+                li.appendChild(a)
+                if (link_data.flags.includes("daily")) {
+                    a.onclick = function() {
+                        const d = new Date();
+                        d.setHours(24,0,0,0);
+                        let newCookie = link_data.title+"=clicked; expires=" + d + "SameSite=lax; Secure";
+                        document.cookie = newCookie;
+                    }
+                    if (document.cookie.indexOf(link_data.title) < 0) {
+                        a.classList.add("unclicked");
+                    }
+                }
+                return li
+            }
+            function addLinks(){
+                let container = document.getElementById('bookmarkscontainer');
+                for (let i = 0; i < links.length; i++) {
+                    let column = document.createElement('ul');
+                    for (let j = 0; j < links[i].length; j++) {
+                        column.appendChild(createLink(links[i][j]))
+                    }
+                    container.appendChild(column);
+                }
+            }
         </script>
         <div class="centercontainer">
         <h1>\(^_^)/<br>Welcome Back!</h1>
-        <div class='bookmarkscontainer'>
-            <ul>
-                <li>
-                    <a class="link" href="https://www.lofi.cafe/">Lofi Cafe</a>
-                </li>
-                <li>
-                    <a class="link" href="https://music.youtube.com/">YT Music</a>
-                </li>
-                <li>
-                    <a class="link" href="https://soundcloud.com/">Soundcloud</a>
-                </li>
-                <li>
-                    <a class="link" href="http://mikudb.moe/">MikuDB</a>
-                </li>
-                <li>
-                    <a class="link" href="https://downloads.khinsider.com/">VGMusic</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a class="link" href="https://www.inoreader.com/">Inoreader</a>
-                </li>
-                <li>
-                    <a class="link" href="https://www.tumblr.com/">Tumblr</a>
-                </li>
-                <li>
-                    <a class="link" href="https://github.com/">GitHub</a>
-                </li>
-                <li>
-                    <a class="link" href="https://mail.google.com/mail/u/0/">Gmail</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a class="link" href="https://netflix.com/">Netflix</a>
-                </li>
-                <li>
-                    <a class="link" href="https://www.youtube.com/">YouTube</a>
-                </li>
-                <li>
-                    <a class="link" href="https://www.twitch.tv/">Twitch</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a class="link" href="https://www.tinkercad.com/dashboard/">TinkerCAD</a>
-                </li>
-                <li>
-                    <a class="link" href="https://vimm.net">Vimm's Lair</a>
-                </li>
-                <li>
-                    <a class="link" href="https://www.chase.com/">Chase</a>
-                </li>
-            </ul>
-        </div>
+        <div id='bookmarkscontainer'></div>
         <div id="clock"></div>
         <div class="tickershadow"></div>
         <div class="tickerwrap">
@@ -144,6 +117,5 @@
         </div>
         <div id="datetime"></div>
     </div>
-    <!-- <iframe src="https://duckduckgo.com/search.html?width=250&prefill=Search&focus=yes" style="overflow:hidden;margin:0;padding:0;width:308px;height:30px;" frameborder="0"></iframe>--> 
     </body>
 </html>

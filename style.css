@@ -1,3 +1,12 @@
+#bookmarkscontainer {
+    top: 215px;
+    width: auto;
+    margin-left:47px;
+    margin-right:30px;
+    position:relative;
+    display: inline-block;
+}
+
 #datetime {
     text-align: right;
     top: 2px;
@@ -22,23 +31,6 @@
     border-color: rgb(89, 0, 172);
     border-style: solid;
     border-width: 2px;
-}
-
-.bookmarkscontainer {
-    top: 215px;
-    width: auto;
-    margin-left:47px;
-    margin-right:30px;
-    position:relative;
-    display: inline-block;
-}
-
-.link {
-    text-align: left;
-    text-decoration: none;
-    font-size: 16px;
-    line-height: 16px;
-    color: cyan;
 }
 
 .tickershadow {
@@ -73,6 +65,10 @@
 .racfact {
     padding-left: 60px;
     display:inline-block;
+}
+
+.unclicked {
+    color: springgreen;
 }
 
 @-webkit-keyframes ticker {
@@ -131,6 +127,14 @@ li {
     text-align: left;
     height: 35px;
     line-height: 16px;
+}
+
+a {
+    text-align: left;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 16px;
+    color: cyan;
 }
 
 @font-face {
