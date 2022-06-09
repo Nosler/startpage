@@ -1,12 +1,3 @@
-#bookmarkscontainer {
-    top: 215px;
-    width: auto;
-    margin-left:47px;
-    margin-right:30px;
-    position:relative;
-    display: inline-block;
-}
-
 #datetime {
     text-align: right;
     top: 2px;
@@ -22,11 +13,11 @@
 
 .centercontainer {
     width: 700px;
-    height: 450px;
+    height: 380px;
     margin: auto;
     position:absolute;
     left: calc(50vw - 350px);
-    top: calc(50vh - 250px);
+    top: calc(50vh - 215px);
     background-color: black;
     border-color: rgb(89, 0, 172);
     border-style: solid;
@@ -42,6 +33,7 @@
     width:675px;
     height:20px;
     bottom:0px;
+    color: black;
     padding-left: 10px;
     padding-right: 10px;
     position:absolute;
@@ -67,9 +59,6 @@
     display:inline-block;
 }
 
-.unclicked {
-    color: springgreen;
-}
 
 @-webkit-keyframes ticker {
     0% {
@@ -105,15 +94,24 @@ body {
 
 h1 {
     font-family:'cursiveregular';
-    font-size: 48px;
-    top:40px;
+    font-size: 35px;
+    top:5px;
     position: absolute;
     width: 100%;
     text-align: center;
 }
 
-ul {
-    width: 115px;
+#bookmarkscontainer {
+    top: 80px;
+    width: auto;
+    margin-left:47px;
+    margin-right:30px;
+    position:relative;
+    display: inline-block;
+}
+
+#bookmarkscontainer ul {
+    width: 112px;
     float: left;
     padding-left:0px;
     padding-right:0px;
@@ -123,18 +121,56 @@ ul {
     line-height:180%;
 }
 
-li {
+#bookmarkscontainer li {
     text-align: left;
     height: 35px;
     line-height: 16px;
 }
 
-a {
+#bookmarkscontainer a {
     text-align: left;
     text-decoration: none;
     font-size: 16px;
     line-height: 16px;
     color: cyan;
+}
+
+#bookmarkscontainer .altcolor {
+    color: rgb(0, 255, 191);
+}
+
+#bigbookmarkscontainer {
+    top: 80px;
+    width: auto;
+    margin-left:28px;
+    margin-right:30px;
+    position:relative;
+    display: inline-block;
+}
+
+#bigbookmarkscontainer ul {
+    width: 111px;
+    float: left;
+    padding-left:5px;
+    padding-right:0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    list-style-type: none;
+    line-height:180%;
+}
+
+#bigbookmarkscontainer li {
+    text-align: left;
+    height: 44px;
+    line-height: 32px;
+}
+
+#bigbookmarkscontainer a {
+    font-family: "talk-to-three-headed-monkeyRg";
+    text-align: left;
+    text-decoration: none;
+    font-size: 28px;
+    color: rgb(0, 255, 191);
 }
 
 @font-face {

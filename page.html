@@ -79,7 +79,7 @@
                 let link_text = document.createTextNode(link_data.title);
                 a.appendChild(link_text)
                 li.appendChild(a)
-                if (link_data.flags.includes("daily")) {
+                if (link_data.flags.includes("altcolor")) {
                     a.onclick = function() {
                         const d = new Date();
                         d.setHours(24,0,0,0);
@@ -87,12 +87,21 @@
                         document.cookie = newCookie;
                     }
                     if (document.cookie.indexOf(link_data.title) < 0) {
-                        a.classList.add("unclicked");
+                        a.classList.add("altcolor");
                     }
                 }
                 return li
             }
             function addLinks(){
+                let bigcontainer = document.getElementById('bigbookmarkscontainer');
+                for (let i = 0; i < biglinks.length; i++) {
+                    let column = document.createElement('ul');
+                    for (let j = 0; j < biglinks[i].length; j++) {
+                        column.appendChild(createLink(biglinks[i][j]))
+                    }
+                    bigcontainer.appendChild(column);
+                }
+
                 let container = document.getElementById('bookmarkscontainer');
                 for (let i = 0; i < links.length; i++) {
                     let column = document.createElement('ul');
@@ -104,7 +113,8 @@
             }
         </script>
         <div class="centercontainer">
-        <h1>\(^_^)/<br>Welcome Back!</h1>
+        <h1>\(^_^)/</h1>
+        <div id='bigbookmarkscontainer'></div>
         <div id='bookmarkscontainer'></div>
         <div id="clock"></div>
         <div class="tickershadow"></div>
